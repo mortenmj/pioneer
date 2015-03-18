@@ -1,0 +1,15 @@
+<launch>
+  <node pkg="joy"
+    type="joy_node"
+    name="joy_xbox">
+    <rosparam file="$(find pioneer)/config/joy_xbox.yaml" command="load"/>
+  </node>
+
+  <node pkg="pioneer"
+    type="teleop_joy.py"
+    name="joy_teleop">
+    <rosparam file="$(find pioneer)/config/joy_teleop.yaml" command="load"/>
+
+    <remap from="cmd_vel" to="pioneer/cmd_vel" />
+  </node>
+</launch>

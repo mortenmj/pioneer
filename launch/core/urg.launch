@@ -1,0 +1,9 @@
+<launch>
+  <node name="urg_node"
+    pkg="urg_node"
+    type="urg_node"
+    respawn="false"
+    output="screen">
+    <rosparam file="$(find pioneer)/config/urg.yaml" command="load" />
+  </node>
+</launch>

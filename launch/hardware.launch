@@ -1,0 +1,14 @@
+<launch>
+  <arg name="laser_enable" default="false" />
+  <arg name="mocap_enable" default="false" />
+  <arg name="rosaria_enable" default="true" />
+
+  <!-- Launch RosAria driver -->
+  <include file="$(find pioneer)/launch/core/rosaria.launch" if="$(arg rosaria_enable)" />
+
+  <!-- Launch Hokuyo laser scanner -->
+  <include file="$(find pioneer)/launch/core/urg.launch" if="$(arg laser_enable)" />
+
+  <!-- Launch motion capture camera system -->
+  <include file="$(find pioneer)/launch/core/mocap.launch" if="$(arg mocap_enable)" />
+</launch>

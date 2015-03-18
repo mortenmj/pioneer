@@ -1,0 +1,11 @@
+global_costmap:
+  global_frame: /map
+  robot_base_frame: pioneer/base_link
+  update_frequency: 5.0
+
+  width: 4
+  height: 4.5
+
+  static_map: false
+  origin_x: -1.5
+  origin_y: -2.5

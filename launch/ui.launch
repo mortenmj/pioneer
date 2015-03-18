@@ -1,0 +1,6 @@
+<launch>
+  <arg name="rviz_enable" default="true" />
+
+  <!-- Launch rviz visualization program -->
+  <include file="$(find pioneer)/launch/ui/rviz.launch" if="$(arg rviz_enable)" />
+</launch>

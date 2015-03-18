@@ -1,0 +1,15 @@
+<launch> 
+  <include file="$(find pioneer)/launch/hardware.launch" >
+    <arg name="laser_enable" value="false" />
+    <arg name="mocap_enable" value="true" />
+    <arg name="rosaria_enable" value="true" />
+  </include>
+
+  <include file="$(find pioneer)/launch/frames.launch" />
+  <include file="$(find pioneer)/launch/nav/map_server.launch" />
+  <include file="$(find pioneer)/launch/control/xbox.launch" />
+
+  <include file="$(find pioneer)/launch/ui.launch" >
+    <arg name="rviz_enable" value="true" />
+  </include>
+</launch>

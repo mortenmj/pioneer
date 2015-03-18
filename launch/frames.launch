@@ -1,0 +1,11 @@
+<launch>
+  <node name="sonar_tf"
+     pkg="tf" 
+     type="static_transform_publisher"
+     args="0 0 0 0 0 0 /pioneer/base_link sonar_frame 10" />
+
+  <node name="map_tf"
+     pkg="tf" 
+     type="static_transform_publisher"
+     args="0 0 0 0 0 0 /world /map 10" />
+</launch>

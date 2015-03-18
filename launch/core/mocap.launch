@@ -1,0 +1,10 @@
+<launch>
+  <node name="mocap_node"
+    pkg="mocap_optitrack"
+    type="mocap_node"
+    respawn="false"
+    launch-prefix=""
+    required="true">
+    <rosparam file="$(find pioneer)/config/mocap.yaml" command="load" />
+  </node>
+</launch>

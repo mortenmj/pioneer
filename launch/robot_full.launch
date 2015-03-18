@@ -1,0 +1,19 @@
+<launch> 
+  <include file="$(find pioneer)/launch/hardware.launch" >
+    <arg name="laser_enable" value="false" />
+    <arg name="mocap_enable" value="true" />
+    <arg name="rosaria_enable" value="true" />
+  </include>
+
+  <include file="$(find pioneer)/launch/frames.launch" />
+  <include file="$(find pioneer)/launch/navigation.launch" />
+
+  <include file="$(find pioneer)/launch/ui.launch" >
+    <arg name="rviz_enable" value="true" />
+  </include>
+
+  <!-- <node name="sensors" pkg="pioneer" type="sensors.py" /> -->
+  <!-- <node name="safety" pkg="pioneer" type="safety.py" />   -->
+  <!-- <node name="pathfinder" pkg="pioneer" type="path.py" /> -->
+  <!-- <node name="control" pkg="pioneer" type="control.py" /> -->
+</launch>

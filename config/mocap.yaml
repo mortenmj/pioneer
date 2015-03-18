@@ -1,0 +1,13 @@
+# 
+# Definition of all trackable objects
+# Identifier corresponds to Trackable ID set in Tracking Tools
+#
+rigid_bodies:
+    '1':
+        pose: pioneer/pose
+        child_frame_id: pioneer/base_link
+        parent_frame_id: map
+    '2':
+        pose: target/pose
+        child_frame_id: target/base_link
+        parent_frame_id: map

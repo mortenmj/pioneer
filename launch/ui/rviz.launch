@@ -1,0 +1,9 @@
+<launch>
+  <arg name="rviz_config" default="pioneer_full.rviz" />
+
+  <node name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find pioneer)/config/$(arg rviz_config)">
+  </node>
+</launch>

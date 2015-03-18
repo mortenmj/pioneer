@@ -1,0 +1,7 @@
+<launch>
+  <!-- Launch map server -->
+  <include file="$(find pioneer)/launch/nav/map_server.launch" />
+
+  <!-- Launch move base -->
+  <include file="$(find pioneer)/launch/nav/move_base.launch" />
+</launch>

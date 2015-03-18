@@ -1,0 +1,4 @@
+ip_address: 192.168.0.10
+angle_min: -1.5
+angle_max: 1.5
+calibrate_time: true

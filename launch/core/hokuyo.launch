@@ -1,0 +1,9 @@
+<launch>
+  <node name="hokuyo"
+    pkg="hokuyo_node"
+    type="hokuyo_node"
+    respawn="false"
+    output="screen">
+    <rosparam file="$(find pioneer)/config/hokuyo.yaml" command="load" />
+  </node>
+</launch>

@@ -1,0 +1,13 @@
+<launch>
+  <node name="rosaria"
+    pkg="rosaria"
+    type="RosAria"
+    respawn="false"
+    output="screen">
+    <rosparam file="$(find pioneer)/config/rosaria.yaml" command="load" />
+    <remap from="~sonar_pointcloud2" to="pioneer/sonar" />
+    <remap from="~cmd_vel" to="pioneer/cmd_vel" />
+    <remap from="~bumper_state" to="pioneer/bumper_state" />
+    <remap from="~battery_voltage" to="pioneer/battery_voltage" />
+  </node>
+</launch>

@@ -1,0 +1,8 @@
+<launch>
+  <node name="waypoint_server"
+    pkg="pioneer"
+    type="waypoint_server.py"
+    respawn="false"
+    output="screen">
+  </node>
+</launch>

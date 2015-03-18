@@ -1,0 +1,6 @@
+port: /dev/ttyACM3
+
+min_ang: -1.5
+max_an: 1.5
+intensity: false
+calibrate_time: true
